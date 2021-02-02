@@ -14,7 +14,7 @@ import com.holidu.interview.assignment.model.CoordinateBoundary;
 @Component
 public class TreeSearchUtil {
 
-    private static final double mToFtUnit = 3.28024;
+    private static final double mToFtRatio = 3.28024;
 
     /**
      * Checks if a tree's coordinates are within the radius of the given cartesian coordinates
@@ -23,7 +23,7 @@ public class TreeSearchUtil {
      * @param treeX   - the X coordinate of the tree
      * @param targetY - the Y coordinate received in the request
      * @param treeY   - the Y coordinate of the tree
-     * @param radius  - the search radius received in the request
+     * @param radius  - the search radius received in the request (in feet)
      * @return true if the distance between the tree and the target coordinates is less than the radius, false otherwise
      */
     public static boolean isTreeWithinCircle(final BigDecimal targetX, final BigDecimal treeX,
@@ -62,6 +62,6 @@ public class TreeSearchUtil {
      * @return the value in feet
      */
     public static BigDecimal valueInFeet(final Long valueInMetres) {
-        return BigDecimal.valueOf(valueInMetres).multiply(BigDecimal.valueOf(mToFtUnit));
+        return BigDecimal.valueOf(valueInMetres).multiply(BigDecimal.valueOf(mToFtRatio));
     }
 }
