@@ -52,7 +52,7 @@ public class TreeSearchControllerTest {
         final String yCoordinate = "208600";
         final String radius = "2000";
 
-        final String expectedResponse = Files.readString(Path.of("src/test/resources/json/expectedResponse.json"));
+        final String expectedResponse = Files.readString(Path.of("src/test/resources/json/expectedResponse-unitTest.json"));
 
         final Gson gson = new Gson();
         final List<Tree> treeList = gson.fromJson(
