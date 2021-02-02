@@ -35,7 +35,7 @@ public class ApplicationTest {
         // Given
         final String xCoordinate = "1021900";
         final String yCoordinate = "208600";
-        final String radius = "2000";
+        final String radius = "20000";
 
         final String expectedResponse = Files.readString(Path.of("src/test/resources/json/expectedResponse-integrationTest.json"));
 
