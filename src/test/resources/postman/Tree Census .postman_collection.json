@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "faf66d37-7f34-4201-afc8-f1ba55f93e0a",
+		"name": "Tree Census ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SoQL - Get Tree Count Aggregated By Common Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common as commonName, x_sp as xCoordinate, y_sp as yCoordinate&$where=x_sp <= 1087516.80000 AND x_sp >= 956283.20000 AND y_sp <= 274216.80000 AND y_sp >= 142983.20000",
+					"protocol": "https",
+					"host": [
+						"data",
+						"cityofnewyork",
+						"us"
+					],
+					"path": [
+						"resource",
+						"uvpi-gqnh.json"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "spc_common as commonName, x_sp as xCoordinate, y_sp as yCoordinate"
+						},
+						{
+							"key": "$where",
+							"value": "x_sp <= 1087516.80000 AND x_sp >= 956283.20000 AND y_sp <= 274216.80000 AND y_sp >= 142983.20000"
+						},
+						{
+							"key": "$order",
+							"value": "commonName",
+							"disabled": true
+						},
+						{
+							"key": "$group",
+							"value": "commonName",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Aggregate Tree Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/holidu/tree-census/v1/aggregate/common-name?xCoordinate=1021900&yCoordinate=208600&radius=20000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"holidu",
+						"tree-census",
+						"v1",
+						"aggregate",
+						"common-name"
+					],
+					"query": [
+						{
+							"key": "xCoordinate",
+							"value": "1021900"
+						},
+						{
+							"key": "yCoordinate",
+							"value": "208600"
+						},
+						{
+							"key": "radius",
+							"value": "20000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
