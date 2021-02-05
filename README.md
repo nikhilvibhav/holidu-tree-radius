@@ -1,4 +1,4 @@
-# Tree Radius Interview Assignment [![Build Status](https://travis-ci.com/nikhilvibhav/holidu-tree-radius.svg?branch=main)](https://travis-ci.com/nikhilvibhav/holidu-tree-radius)
+# Tree Radius Interview Assignment [![Build Status](https://travis-ci.com/nikhilvibhav/tree-radius.svg?branch=main)](https://travis-ci.com/nikhilvibhav/tree-radius)
 
 Hi there! Congratulations on making it to the next step!
 
